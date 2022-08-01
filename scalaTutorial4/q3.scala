@@ -17,7 +17,7 @@ object Q3 extends App{
     //string to catch the format string as name string is immutable
     var formattedString =""
     var i = 0
-    //run throughout the list character by character
+    // go through the list of Index numbers
     while(i < name.length()){
       //contains() => to check the whether an element is present in the list or not 
       if(numberIndex.contains(i)) formattedString += convertType(name.charAt(i).toString)//charAt(i)=> returns the ith index character
