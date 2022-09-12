@@ -5,12 +5,12 @@ object ceaserCipher extends App{
 
   val alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-  val E = (c:Char,key:Int,a:String)=>a((a.indexOf(c.toLower)+key)%a.size) //a=>alphabet
+  val E = (c:Char,key:Int,a:String)=>((a.indexOf(c.toLower)+key)%a.size) //a=>alphabet
   //a.indexOf(c.toLower)+key => convert the text passed to lowercase and get the index of that character by using indexOf function and add the key value to it.
   //get the mod of that value by alphabet size =>returns the new position of the character
   //a(pos) => returns the new character
-
-  val D = (c:Char,key:Int,a:String)=>a((a.indexOf(c.toLower)-key+a.size)%a.size)
+a
+  val D = (c:Char,key:Int,a:String)=>a((a.indexOf(c.toLower)-key+a.size)%a.size) //ex:for z=>3 then mod will give 0 therefore we add the aph size
   
   val cipher = (algo:(Char,Int,String)=>Char,s:String,key:Int,a:String)=>s.map(algo(_,key,a)) //algo => signature function. _=> used to add any number of char
   
