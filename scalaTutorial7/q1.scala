@@ -11,9 +11,9 @@ class Rational(x:Int, y:Int) {
     override def toString(): String = numer.toString + "/" + denom.toString
 }
 object Q1 extends App {
-    val x = new Rational(1,4)
-    val y = new Rational(4,5)
-    val z = new Rational(1,6)
+    val x = new Rational(3,4)
+    val y = new Rational(5,8)
+    val z = new Rational(2,7)
 
     println(x.neg)
 

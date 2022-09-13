@@ -9,8 +9,6 @@ class Account(nic:String, val accNo: Int, var balance: Double = 0.0){
         this.balance = this.balance - amt
     }
 
-    
-
     def transfer(account:Int, amt:Double) : Unit = {
         val transferAcc = Q3.find(account, Q3.listOfAccounts)
         if (balance < 0.0) println("Insufficient balance")
@@ -20,7 +18,7 @@ class Account(nic:String, val accNo: Int, var balance: Double = 0.0){
         }
     }
 
-    override def toString = "["+nic+":"+accNo +":"+ balance+"]"
+    override def toString = "[NIC:"+nic+",AccountNo:"+accNo +",Balance:"+ balance+"]"
 }
 
 object Q3 extends App {
